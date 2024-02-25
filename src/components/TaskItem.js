@@ -3,6 +3,7 @@ import styles from "../styles/TaskItem.Module.css";
 import { FaEdit } from "react-icons/fa";
 import { MdSaveAlt } from "react-icons/md";
 import { MdOutlineDelete } from "react-icons/md";
+import { format } from "date-fns";
 
 const TaskItem=({
   task,
@@ -33,10 +34,12 @@ const TaskItem=({
                 handleSave(index, editedText);
               }
             }}
-            className={ task.completed ? "completed" : ""}
+            className={task.completed ? "completed" : ""}
           />
         ) : (
-          <span className={task.completed ? "completed" : ""}>{task.text}</span>
+          <span className={task.completed ? "completed" : ""}>
+            {task.text} <br /> {format(task.time, "MM/dd/yyyy HH:mm:ss")}
+          </span>
         )}
         <div className="buttons">
           <button

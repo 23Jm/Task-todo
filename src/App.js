@@ -15,9 +15,9 @@ const App=()=>{
   const addTask = () => {
     if (taskInput.trim() !== "") {
       setTasks([...tasks,
-        { text: taskInput, completed: false},
-      ]);
+        { text: taskInput, completed: false,time:new Date()}]);
       setTaskInput("");
+      console.log(tasks)
     }
   };
 

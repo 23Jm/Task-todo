@@ -1,0 +1,15 @@
+.title{
+   color: #fefae0;
+   padding: 5px 10px;
+   border-radius: 5px;
+   border: 1px solid linear-gradient(#219ebc,#8ecae6);
+}
+.title:hover{
+ border: 1px solid #fefae0;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+}
